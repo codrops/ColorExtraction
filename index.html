@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Color Extraction Effect with Vibrant.js</title>
+		<meta name="description" content="Creating a color palette from images in a fun way using Vibrant.js" />
+		<meta name="keywords" content="color palette, effect, animation, vibrant.js, extract color, image, web design" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+  		<script src="js/modernizr.custom.js"></script>
+	</head>
+	<body>
+		<svg viewBox="0 0 640 360" class="hidden">
+			<filter id="grayscale">
+				<feColorMatrix type="saturate" values="0"/>
+			</filter>
+		</svg>
+		<div class="container">
+			<header class="codrops-header">
+				<div class="codrops-links">
+					<a class="codrops-icon codrops-icon--prev" href="http://tympanus.net/Development/ImageTiltEffect/" title="Previous Demo"><span>Previous Demo</span></a>
+					<a class="codrops-icon codrops-icon--drop" href="http://tympanus.net/codrops/?p=24144" title="Back to the article"><span>Back to the Codrops article</span></a>
+				</div>
+				<h1>Color Extraction Effect <span>using CSS Filters and Vibrant.js</span></h1>
+			</header>
+			<div class="content">
+				<div id="slider" class="slider">
+					<div class="slider__item slider__item--current">
+						<img class="slider__img" src="img/1.jpg" alt="img01" />
+					</div>
+					<div class="slider__item">
+						<img class="slider__img" src="img/2.jpg" alt="img02" />
+					</div>
+					<div class="slider__item">
+						<img class="slider__img" src="img/3.jpg" alt="img03" />
+					</div>
+					<div class="slider__item">
+						<img class="slider__img" src="img/4.jpg" alt="img04" />
+					</div>
+					<div class="slider__item">
+						<img class="slider__img" src="img/5.jpg" alt="img05" />
+					</div>
+					<div class="slider__item">
+						<img class="slider__img" src="img/6.jpg" alt="img06" />
+					</div>
+					<div class="slider__item">
+						<img class="slider__img" src="img/7.jpg" alt="img07" />
+					</div>
+					<nav class="slider__nav-wrap">
+						<button class="slider__nav slider__nav--prev"><i class="fa fa-angle-left"></i><span class="text-hidden">Previous</span></button>
+						<button class="slider__nav slider__nav--next"><i class="fa fa-angle-right"></i><span class="text-hidden">Next</span></button>
+					</nav>
+				</div><!-- /slider -->
+				<div class="tools">
+					<button class="button-color"><i class="fa fa-eyedropper"></i><span class="text-hidden">Extract</span></button>
+					<ul class="palette">
+						<li class="palette__item">
+							<div class="palette__inner">
+								<div class="palette__fill"></div>
+								<i class="icon fa fa-tint"></i>
+								<div class="palette__name">
+									<span class="palette__value palette__value--default">#######</span>
+									<span class="palette__value palette__value--real">#######</span>
+								</div>
+							</div>
+							<i class="drop drop--1"></i>
+							<i class="drop drop--2"></i>
+							<i class="drop drop--3"></i>
+							<i class="drop drop--4"></i>
+						</li>
+						<li class="palette__item">
+							<div class="palette__inner">
+								<div class="palette__fill"></div>
+								<i class="icon fa fa-tint"></i>
+								<div class="palette__name">
+									<span class="palette__value palette__value--default">#######</span>
+									<span class="palette__value palette__value--real">#######</span>
+								</div>
+							</div>
+							<i class="drop drop--1"></i>
+							<i class="drop drop--2"></i>
+							<i class="drop drop--3"></i>
+							<i class="drop drop--4"></i>
+						</li>
+						<li class="palette__item">
+							<div class="palette__inner">
+								<div class="palette__fill"></div>
+								<i class="icon fa fa-tint"></i>
+								<div class="palette__name">
+									<span class="palette__value palette__value--default">#######</span>
+									<span class="palette__value palette__value--real">#######</span>
+								</div>
+							</div>
+							<i class="drop drop--1"></i>
+							<i class="drop drop--2"></i>
+							<i class="drop drop--3"></i>
+							<i class="drop drop--4"></i>
+						</li>
+						<li class="palette__item">
+							<div class="palette__inner">
+								<div class="palette__fill"></div>
+								<i class="icon fa fa-tint"></i>
+								<div class="palette__name">
+									<span class="palette__value palette__value--default">#######</span>
+									<span class="palette__value palette__value--real">#######</span>
+								</div>
+							</div>
+							<i class="drop drop--1"></i>
+							<i class="drop drop--2"></i>
+							<i class="drop drop--3"></i>
+							<i class="drop drop--4"></i>
+						</li>
+						<li class="palette__item">
+							<div class="palette__inner">
+								<div class="palette__fill"></div>
+								<i class="icon fa fa-tint"></i>
+								<div class="palette__name">
+									<span class="palette__value palette__value--default">#######</span>
+									<span class="palette__value palette__value--real">#######</span>
+								</div>
+							</div>
+							<i class="drop drop--1"></i>
+							<i class="drop drop--2"></i>
+							<i class="drop drop--3"></i>
+							<i class="drop drop--4"></i>
+						</li>
+					</ul>
+				</div><!-- /tools -->
+			</div>
+			<!-- Related demos -->
+			<section class="content content--related">
+				<p>If you enjoyed this demo you might also like:</p>
+				<a class="media-item" href="http://tympanus.net/Development/InteractiveColoringConcept/">
+					<img class="media-item__img" src="img/related/ColoringConcept.jpg">
+					<h3 class="media-item__title">Interactive Coloring Concept </h3>
+				</a>
+				<a class="media-item" href="http://tympanus.net/Development/WobblySlideshowEffect/">
+					<img class="media-item__img" src="img/related/WobblySlideshowEffect.png">
+					<h3 class="media-item__title">Wobbly Slideshow Effect</h3>
+				</a>
+			</section>
+			<section class="content">
+				<p><strong>Images by <a href="http://kaboompics.com/">kaboompics.com</a></strong></p>
+			</section>
+		</div><!-- /container -->
+		<script src="js/classie.js"></script>
+		<script src="js/Vibrant.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
