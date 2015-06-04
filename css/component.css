@@ -347,6 +347,8 @@
 	display: block;
 	max-width: 100%;
 	margin: 0 auto;
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
 	-webkit-transition: filter .8s, -webkit-filter .8s;
 	transition: filter .8s, -webkit-filter .8s;
 }
