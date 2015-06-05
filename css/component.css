@@ -520,14 +520,12 @@
 
 .palette__value--real {
 	opacity: 0;
-	-webkit-transform: translate3d(0, -50%, 0);
-	transform: translate3d(0, -50%, 0);
 }
 
 .palette__item--animate .palette__value--default {
 	opacity: 0;
-	-webkit-transform: translate3d(0, -50%, 0);
-	transform: translate3d(0, -50%, 0);
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
 }
 
 .palette__item--animate .palette__value--real {
